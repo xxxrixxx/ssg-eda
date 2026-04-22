@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSG.COM 특가 상품 정밀 분석 대시보드</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="glass-bg"></div>
+    
+    <header class="navbar">
+        <div class="logo">SSG<span>.COM</span> 지능형 분석</div>
+        <div class="current-date" id="currentDate">2026. 04. 20</div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="fade-in">실시간 특가 상품 데이터 분석</h1>
+            <p class="fade-in-delay">SSG.COM의 실시간 특가 상품 데이터를 기반으로 한 전략적 데이터 대시보드입니다.</p>
+        </section>
+
+        <!-- KPI Grid -->
+        <section class="stats-grid">
+            <div class="stat-card glass-card">
+                <span class="label">전체 상품 수</span>
+                <h2 id="totalProducts">-</h2>
+                <div class="trend up">▲ 실시간 수집</div>
+            </div>
+            <div class="stat-card glass-card">
+                <span class="label">평균 가격</span>
+                <h2 id="avgPrice">₩ -</h2>
+                <div class="trend">일간 평균</div>
+            </div>
+            <div class="stat-card glass-card">
+                <span class="label">평균 할인율</span>
+                <h2 id="avgDiscount">-%</h2>
+                <div class="trend up">▲ 프로모션 강도</div>
+            </div>
+            <div class="stat-card glass-card">
+                <span class="label">주요 브랜드</span>
+                <h2 id="topBrand">-</h2>
+                <div class="trend">시장 점유율</div>
+            </div>
+        </section>
+
+        <!-- Main Layout -->
+        <div class="content-layout">
+            <div class="main-content">
+                <!-- Analysis Sections -->
+                <div class="gallery-category fade-in">
+                    <div class="cat-header">
+                        <span class="cat-pill">핵심 인사이트</span>
+                        <h3>키워드 및 시장 맥락 분석</h3>
+                    </div>
+                    <div class="image-gallery">
+                        <div class="gallery-item glass-card large">
+                            <img src="images/tfidf_keywords.png" alt="키워드 분석">
+                            <div class="img-info">
+                                <h4>전략적 키워드 분석 (TF-IDF)</h4>
+                                <p>'특가', '할인', '쓱7클럽' 등 고객 유입의 핵심 동인 분석</p>
+                            </div>
+                        </div>
+                        <div class="gallery-grid">
+                            <div class="gallery-item glass-card">
+                                <img src="images/viz_brand_freq.png" alt="브랜드 빈도">
+                                <div class="img-info">
+                                    <h4>브랜드 노출 빈도</h4>
+                                    <p>상위 노출 브랜드 빈도 및 점유율</p>
+                                </div>
+                            </div>
+                            <div class="gallery-item glass-card">
+                                <img src="images/viz_price_dist.png" alt="가격 분포">
+                                <div class="img-info">
+                                    <h4>가격 스펙트럼</h4>
+                                    <p>특가 상품의 시장 가격대 분포</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-category fade-in" style="margin-top: 40px;">
+                    <div class="cat-header">
+                        <span class="cat-pill">전략적 로직</span>
+                        <h3>가격 및 할인 전략</h3>
+                    </div>
+                    <div class="gallery-grid-triple">
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_discount_box.png" alt="할인율 분포">
+                            <div class="img-info">
+                                <h4>할인율 변동 범위</h4>
+                                <p>할인율의 변동폭 및 정책 안정성</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_rank_price_scatter.png" alt="순위 vs 가격">
+                            <div class="img-info">
+                                <h4>순위 및 단가 상관관계</h4>
+                                <p>순위와 가격 간의 상관관계 유무</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_rank_disc_line.png" alt="순위 vs 할인율">
+                            <div class="img-info">
+                                <h4>프로모션 흐름</h4>
+                                <p>순위 구간별 평균 할인율 추이</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-category fade-in" style="margin-top: 40px;">
+                    <div class="cat-header">
+                        <span class="cat-pill">고급 지표 분석</span>
+                        <h3>고객 만족도 및 브랜드 파워</h3>
+                    </div>
+                    <div class="gallery-grid-triple">
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_brand_price_avg.png" alt="브랜드별 가격">
+                            <div class="img-info">
+                                <h4>가격 리더십</h4>
+                                <p>주요 위탁 브랜드별 제품 평균가</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_brand_max_disc.png" alt="최대 할인율">
+                            <div class="img-info">
+                                <h4>시장 공세 강도</h4>
+                                <p>브랜드별 최대 할인 공세 강도</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item glass-card">
+                            <img src="images/viz_disc_review_scatter.png" alt="할인율 vs 리뷰">
+                            <div class="img-info">
+                                <h4>상호작용 로직</h4>
+                                <p>할인율이 고객 리뷰 형성에 미치는 영향</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="insight-card glass-card sticky">
+                    <h3>핵심 요약 리포트</h3>
+                    <ul class="insight-list">
+                        <li><strong>프리미엄 앵커</strong>: 삼성, 입생로랑 등 파워 브랜드가 고단가 매출을 견인.</li>
+                        <li><strong>멤버십 락인</strong>: '쓱7클럽' 키워드가 최상위 노출되며 멤버십 전략 부각.</li>
+                        <li><strong>진입 장벽</strong>: 3만원 이하 생필품이 전체의 50% 이상 점유하여 집객 유도.</li>
+                        <li><strong>전략적 이원화</strong>: 신진 브랜드는 80% 이상의 파격 할인을 마케팅 수단으로 활용.</li>
+                    </ul>
+                    <a href="report/eda_report.md" class="btn-primary">상세 분석 보고서 보기</a>
+                </div>
+
+                <div class="data-table-container glass-card">
+                    <h3>특가 상품 실시간 현황</h3>
+                    <div class="table-wrapper">
+                        <table id="rankingTable">
+                            <thead>
+                                <tr>
+                                    <th>순위</th>
+                                    <th>상품명</th>
+                                    <th>판매가</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableBody">
+                                <!-- JS에서 데이터 삽입 -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 SSG 데이터 분석 팀. Powered by Antigravity.</p>
+    </footer>
+
+    <script src="src/data.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
